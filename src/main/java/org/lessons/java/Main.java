@@ -16,29 +16,17 @@ public class Main {
             // myAnimals[i].emitSound();
             myAnimals[i].eat();
 
-            makeFly(myAnimals[i]);
-            makeSwim(myAnimals[i]);
+            makeFly((Fly) myAnimals[i]);
+            makeSwim((Swim) myAnimals[i]);
         }
         
     }
 
-    public static void makeFly(Animal animal){
-        if(animal instanceof Fly){
-            // animal.emitSound();
-            ((Fly) animal).fly();
-        } else {
-            // animal.emitSound();
-            System.out.println("(I can't fly!)");
-        }
+    public static void makeFly(Fly animal){
+        animal.fly();
     }
 
-    public static void makeSwim(Animal animal){
-        if(animal instanceof Swim){
-            // animal.emitSound();
-            ((Swim) animal).swim();
-        } else {
-            // animal.emitSound();
-            System.out.println("(I can't swim!)");
-        }
+    public static void makeSwim(Swim animal){
+        animal.swim();
     }
 }
