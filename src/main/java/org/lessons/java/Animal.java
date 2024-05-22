@@ -3,13 +3,19 @@ package org.lessons.java;
 public abstract class Animal {
 
     private String name;
+    private String food;
 
-    public Animal(String name){
+    public Animal(String name, String food){
         this.name = name;
+        this.food = food;
     }
 
     public String getName(){
         return name;
+    }
+
+    public String getFood(){
+        return food;
     }
     
     public void sleep(){
@@ -17,5 +23,5 @@ public abstract class Animal {
     }
 
     public abstract void emitSound();
-    public abstract void eat();
+    // public abstract void eat();
 }

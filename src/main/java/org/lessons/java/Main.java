@@ -4,18 +4,18 @@ public class Main {
     public static void main(String[] args) {
 
         Animal[] myAnimals = {
-            new Dog("Fido"),
-            new Eagle("America"),
-            new Sparrow("Chip"),
-            new Dolphin("Ecco")
+            new Dog("Fido", "meat"),
+            new Eagle("America", "mice"),
+            new Sparrow("Chip", "worms"),
+            new Dolphin("Ecco", "fish")
         };
         
         for (int i = 0; i < myAnimals.length; i++) {
             myAnimals[i].emitSound();
             System.out.println("(Hi I'm " + myAnimals[i].getName() + "!)");
             // myAnimals[i].emitSound();
-            myAnimals[i].eat();
-
+            // myAnimals[i].eat();
+            System.out.println("(I'm eating " + myAnimals[i].getFood() + "!)");
             makeFly(myAnimals[i]);
             makeSwim(myAnimals[i]);
         }
