@@ -2,7 +2,7 @@ package org.lessons.java.Bonus;
 
 public class Playstation extends Device{
 
-    public Playstation() {
+    public Playstation(){
         // super(className);
     }
     
