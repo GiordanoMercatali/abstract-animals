@@ -16,8 +16,13 @@ public class Main {
             // myAnimals[i].emitSound();
             myAnimals[i].eat();
 
-            makeFly((Fly) myAnimals[i]);
-            makeSwim((Swim) myAnimals[i]);
+            if(myAnimals[i] instanceof Fly){
+                makeFly((Fly) myAnimals[i]);
+            } else if(myAnimals[i] instanceof Swim){
+                makeSwim((Swim) myAnimals[i]);
+            } else {
+                System.out.println("I can't do those things!");
+            }
         }
         
     }
