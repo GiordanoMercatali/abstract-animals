@@ -1,19 +1,19 @@
 package org.lessons.java;
 
-public class Dog extends Animal {
+public class Eagle extends Animal {
 
-    public Dog(String name) {
+    public Eagle(String name) {
         super(name);
     }
 
     @Override
     public void emitSound() {
-        System.out.println("Bark bark!");
+        System.out.println("Eeeeeee!");
     }
 
     @Override
     public void eat() {
-        System.out.println("(I'm eating meat)");
+        System.out.println("(I'm eating mice)");
     }
     
 }
