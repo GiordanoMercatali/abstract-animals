@@ -1,48 +1,43 @@
 package org.lessons.java;
 
 public class Main {
-    public static Dog dog = new Dog("Chip");
-
-        
     public static void main(String[] args) {
 
-        dog.emitSound();
-        System.out.println("(Hi I'm " + dog.getName() + "!)");
-        dog.emitSound();
-        dog.eat();
+        Animal[] myAnimals = {
+            new Dog("Fido"),
+            new Eagle("America"),
+            new Sparrow("Chip"),
+            new Dolphin("Ecco")
+        };
         
-        // if (dog instanceof Fly) {
-        //     dog.emitSound();
-        //     ((Fly) dog).fly();
-        // } else if (dog instanceof Swim){
-        //     dog.emitSound();
-        //     ((Swim) dog).swim();
-        // } else{
-        //     dog.emitSound();
-        //     System.out.println("(I can't do none of those actions!)");
-        // }
+        for (int i = 0; i < myAnimals.length; i++) {
+            myAnimals[i].emitSound();
+            System.out.println("(Hi I'm " + myAnimals[i].getName() + "!)");
+            // myAnimals[i].emitSound();
+            myAnimals[i].eat();
 
-        makeFly(dog);
-        makeSwim(dog);
+            makeFly(myAnimals[i]);
+            makeSwim(myAnimals[i]);
+        }
         
     }
 
     public static void makeFly(Animal animal){
         if(animal instanceof Fly){
-            animal.emitSound();
+            // animal.emitSound();
             ((Fly) animal).fly();
         } else {
-            animal.emitSound();
+            // animal.emitSound();
             System.out.println("(I can't fly!)");
         }
     }
 
     public static void makeSwim(Animal animal){
         if(animal instanceof Swim){
-            animal.emitSound();
+            // animal.emitSound();
             ((Swim) animal).swim();
         } else {
-            animal.emitSound();
+            // animal.emitSound();
             System.out.println("(I can't swim!)");
         }
     }
