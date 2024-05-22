@@ -2,14 +2,23 @@ package org.lessons.java;
 
 public class Main {
     public static void main(String[] args) {
-        Sparrow sparrow = new Sparrow("Chip");
+        Dog dog = new Dog("Chip");
 
-        sparrow.emitSound();
-        System.out.println("(Hi I'm " + sparrow.getName() + "!)");
-        sparrow.emitSound();
-        sparrow.eat();
-        sparrow.emitSound();
-        sparrow.fly();
+        dog.emitSound();
+        System.out.println("(Hi I'm " + dog.getName() + "!)");
+        dog.emitSound();
+        dog.eat();
+        
+        if (dog instanceof Fly) {
+            dog.emitSound();
+            ((Fly) dog).fly();
+        } else if (dog instanceof Swim){
+            dog.emitSound();
+            ((Swim) dog).swim();
+        } else{
+            dog.emitSound();
+            System.out.println("(I can't do none of those actions!)");
+        }
         
     }
 }
