@@ -17,5 +17,5 @@ public abstract class Animal {
     }
 
     public abstract void emitSound();
-    public abstract boolean eat(String food);
+    public abstract void eat();
 }
