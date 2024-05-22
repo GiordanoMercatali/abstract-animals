@@ -4,19 +4,19 @@ public abstract class Device {
 
     private String className;
 
-    public Device(String className){
+    public Device(){
         this.className = getClassName();
     }
 
     public String getClassName(){
-        return className = getClass().getName();
+        return getClass().getSimpleName();
     }
     
     public void play(){
-        System.out.println("I'm " + className + " and I'm in play mode");
+        System.out.println("I'm a" + className + " and I'm in play mode");
     }
 
     public void stop(){
-        System.out.println("I'm " + className + " and I'm in stop mode");
+        System.out.println("I'm a" + className + " and I'm in stop mode");
     }
 }
