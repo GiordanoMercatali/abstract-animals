@@ -2,8 +2,8 @@ package org.lessons.java;
 
 public class Sparrow extends Animal implements Fly{
 
-    public Sparrow(String name, String food) {
-        super(name, food);
+    public Sparrow(String name) {
+        super(name);
     }
 
     @Override
@@ -11,10 +11,10 @@ public class Sparrow extends Animal implements Fly{
         System.out.println("Chip chip!");
     }
 
-    // @Override
-    // public void eat() {
-    //     System.out.println("(I'm eating worms)");
-    // }
+    @Override
+    public void eat() {
+        System.out.println("(I'm eating worms)");
+    }
 
     @Override
     public void fly() {
