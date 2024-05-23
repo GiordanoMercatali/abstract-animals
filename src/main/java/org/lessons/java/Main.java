@@ -16,11 +16,15 @@ public class Main {
             // myAnimals[i].emitSound();
             myAnimals[i].eat();
 
-            if(myAnimals[i] instanceof Fly){
+            if(myAnimals[i] instanceof Fly && !(myAnimals[i] instanceof Swim)){
                 makeFly((Fly) myAnimals[i]);
-            } else if(myAnimals[i] instanceof Swim){
+            } else if(myAnimals[i] instanceof Swim && !(myAnimals[i] instanceof Fly)){
                 makeSwim((Swim) myAnimals[i]);
-            } else {
+            } else if (myAnimals[i] instanceof Fly && myAnimals[i] instanceof Swim) {
+                makeFly((Fly) myAnimals[i]);
+                makeSwim((Swim) myAnimals[i]);
+            }
+            else {
                 System.out.println("I can't do those things!");
             }
         }
