@@ -10,7 +10,7 @@ public class Creator {
     }
 
     public void Create(){
-            System.out.println("Are a playstation or a dvd player?");
+            System.out.println("Are you a playstation or a dvd player?");
             String nextDevice = scanner.nextLine().toLowerCase();
             if (nextDevice.equals("playstation")) {
                 Playstation ps = new Playstation();
